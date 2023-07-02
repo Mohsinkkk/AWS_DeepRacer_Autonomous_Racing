@@ -31,5 +31,14 @@ For autonomous racing,
 - The goal is for the vehicle to reach its destination quickly without accidents.
 - Rewards are scores used to encourage safe and speedy travel to the destination. The scores penalize dangerous and wasteful driving.
 
- 
+ ## Reinforcement Learning Model
+
+A reinforcement learning model is an environment in which an agent acts that establishes three things: 
+- The states that the agent has [Input]
+- The actions that the agent can take and [Output]
+- The rewards that are received by taking action.
+
+The strategy with which the agent decides its action is referred to as a **policy**. The policy takes the environment state as input and outputs the action to take. In reinforcement learning, the policy is often represented by a **deep neural network**. We refer to this as the reinforcement learning model. Each training job generates one model. A model can be generated even if the training job is stopped early. 
+
+*A model is **immutable** which means it cannot be modified and overwritten after it is created.* 
 
