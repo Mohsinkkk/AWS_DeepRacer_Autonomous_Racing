@@ -89,6 +89,16 @@ AWS Services used for Model Building are as follows:
 
   The reward function is a key part of reinforcement learning. It determines the behavior that the agent learns by incentivizing specific actions over others. The user provides the reward function by using Python. This reward function is used by an optimizing algorithm to train the reinforcement learning model.
 
+- **Experience Episode (Experience Generating Episode) :** An experience episode is a period in which the agent collects experiences as training data from the environment by running from a given starting point to completing the track or going off the track. Different episodes can have different lengths.
+- **Experience Iteration (Experience Generating Iteration) :** It is a set of consecutive experiences between each policy iteration that performs updates of the policy network weights. At the end of each experience iteration, the collected episodes are added to an experience replay or buffer. The size can be set in one of the hyperparameters for training. The neural network is updated by using random samples of the experiences.
+- **Policy Iteration (Policy Updating Iteration) :** It is any number of passes through the randomly sampled training data to update the policy neural network weights during **gradient ascent**. A single pass through the training data to update the weights is also known as an **epoch**.
+- **Training Job :** A training job is a workload that trains a reinforcement learning model and creates trained model artifacts on which to run inference. Each training job has two sub-processes:
+    - Start the agent to follow the current policy. The agent explores the environment in a number of episodes and creates training data. This data generation is an iterative process itself.
+    - Apply the new training data to compute new policy gradients. Update the network weights and continue training. Repeat Step 1 until a stop condition is met.
+
+- **Evaluation Job :** An evaluation job is a workload that tests the performance of a model. Performance is measured by given metrics after the training job is done. The standard AWS DeepRacer performance metric is the **driving time** that an agent takes to complete a lap on a track. Another metric is the **percentage of the lap completed**. 
+
+
 
 
 
