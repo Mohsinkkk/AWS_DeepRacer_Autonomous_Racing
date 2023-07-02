@@ -74,3 +74,22 @@ AWS Services used for Model Building are as follows:
 <p align="center">
 <img src="https://github.com/manishkr1754/AWS_DeepRacer_Autonomous_Racing/assets/114581035/897bbe10-cfa9-42c7-b78e-4a8bd9408441" alt="drawing" />
 </p>
+
+
+## Concepts and Terms related to Model Building & Evaluation
+
+- **Policy Network :** A policy network is a neural network that is trained. The policy network takes video images as input and predicts the next action for the agent. Depending on the algorithm, it may also evaluate the value of current state of the agent. Training the policy network amounts to iterating through steps that involve generating experiences based on the current policy, followed by optimizing the policy network with the newly generated experiences. The process continues until certain performance metrics meet required criteria.  
+- **Optimization Algorithm :** An optimization algorithm is the algorithm used to train a model. For **supervised training**, the algorithm is optimized by **minimizing a loss function** with a particular strategy to update weights. For **reinforcement learning**, the algorithm is optimized by **maximizing the expected future rewards** with a particular reward function.
+- **Hyperparameters :** Hyperparameters are algorithm-dependent variables that control the performance of neural network training. An example hyperparameter is the learning rate that controls how many new experiences are counted in learning at each step. A larger learning rate results in a faster training but may make the trained model lower quality. Hyperparameters are empirical and require systematic tuning for each training.
+- **Reward Function :** A reward function is an algorithm within a learning model that tells the agent whether the action performed resulted in:
+  
+     - A good outcome that should be reinforced
+     - A neutral outcome
+     - A bad outcome that should be discouraged
+
+  The reward function is a key part of reinforcement learning. It determines the behavior that the agent learns by incentivizing specific actions over others. The user provides the reward function by using Python. This reward function is used by an optimizing algorithm to train the reinforcement learning model.
+
+
+
+
+
