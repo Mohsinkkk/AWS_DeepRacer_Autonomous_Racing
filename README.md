@@ -22,6 +22,11 @@ Reinforcement learning is a machine learning method that is focused on **autonom
 
 *In reinforcement learning, designing the reward function is important. Better-crafted reward functions result in better decisions by the agent.*
 
+
+#### Terms in Reinforcement Learning
+![image](https://github.com/manishkr1754/AWS_DeepRacer_Autonomous_Racing/assets/114581035/be83035f-9cfa-414b-9995-ff84f493b2b3)
+
+
 To encourage learning during training, the learning agent must be allowed to sometimes pursue actions that might not result in rewards. This is referred to as the **exploration and exploitation trade-off**. It helps reduce or remove the likelihood that the agent might be misguided into false destinations.
 
 #### Reinforcement Learning in context of Autonomous Racing
@@ -35,10 +40,37 @@ For autonomous racing,
 
 A reinforcement learning model is an environment in which an agent acts that establishes three things: 
 - The states that the agent has [Input]
-- The actions that the agent can take and [Output]
+- The actions that the agent can take [Output]
 - The rewards that are received by taking action.
 
 The strategy with which the agent decides its action is referred to as a **policy**. The policy takes the environment state as input and outputs the action to take. In reinforcement learning, the policy is often represented by a **deep neural network**. We refer to this as the reinforcement learning model. Each training job generates one model. A model can be generated even if the training job is stopped early. 
 
 *A model is **immutable** which means it cannot be modified and overwritten after it is created.* 
 
+## Machine Learning Frameworks Used
+
+<p align="center">
+<img src="https://github.com/manishkr1754/AWS_DeepRacer_Autonomous_Racing/assets/114581035/3572a5ee-f2ca-42c2-9cda-034edfb6bb60" alt="drawing" height="400"/>
+</p>
+
+AWS Services used for Model Building are as follows: 
+- **Amazon DeepRacer :** While it is not a framework itslef but a console, it provides a complete learning environment for Autonomous Racing. It includes a simulated racing environment, reinforcement learning algorithms and web based interface for training and evaluating models.
+- **Amazon SageMaker :** Powerful Machine Learning Platform that supports popular frameworks like **RLCoach, MXNet and TensorFlow** which is used here for Autonomous Racing.
+- **Amazon RoboMaker :** It helps in developing, testing and deploying robotic applications. It is used here to simulate and evaluate autonomous racing algorithms and models.
+- **Amazon Kinesis Video Streams :** It is used here to share live simulation video of learning model.
+- **Amazon S3 :** It is used for storage purpose.
+- **Amazon CloudWatch :** It is used here to store logs related to events during model building.
+
+
+## Workflow of AWS DeepRacer
+
+<p align="center">
+<img src="https://github.com/manishkr1754/AWS_DeepRacer_Autonomous_Racing/assets/114581035/91bea88c-84b9-414d-8bdc-17988c1ded8a" alt="drawing" />
+</p>
+
+
+## Steps to Model Creation
+
+<p align="center">
+<img src="https://github.com/manishkr1754/AWS_DeepRacer_Autonomous_Racing/assets/114581035/897bbe10-cfa9-42c7-b78e-4a8bd9408441" alt="drawing" />
+</p>
